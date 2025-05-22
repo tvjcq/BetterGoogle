@@ -48,10 +48,6 @@ Contributions are welcome! Feel free to:
 - Icons are provided as SVG files and injected into the page
 - Storage API is used for saving user preferences
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Acknowledgments
 
 - Inspired by various Google search enhancing extensions
