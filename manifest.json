@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "BetterGoogle",
+  "version": "1.0",
+  "description": "Améliore les recherches Google : supprime les résultats sponsorisés, ajoute des onglets et des boutons utiles.",
+  "permissions": ["storage"],
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/search*", "*://www.google.fr/search*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["injectChat.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["chatgpt.svg", "lucky.svg"],
+      "matches": ["*://www.google.com/*", "*://www.google.fr/*"]
+    }
+  ]
+}
